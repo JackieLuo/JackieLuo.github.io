@@ -4,16 +4,40 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>My post | JackieLuo&#39;s Github Files</title>
+    <title>Python 数组和字典对象的几个好用的方法 | JackieLuo&#39;s Github Files</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Jackie Luo">
+    
+    <meta name="description" content="1、“+”加号
+1
+2
+3
+4
+5
+a = [1, 2, 3]
+b = [4, 5, 6]
+print a + b
+# print[1, 2, 3, 4, 5, 6]
+# 数组相加
+
+
+2、“*”乘号
+1
+2
+3
+4
+5
+a = [&quot;xxx&quot;]
+b = a * 5
+print b
+# print [">
     
     
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="jackielzq" />
-    <meta name="twitter:title" content="My post | JackieLuo&#39;s Github Files" />
+    <meta name="twitter:title" content="Python 数组和字典对象的几个好用的方法 | JackieLuo&#39;s Github Files" />
       
     
     
@@ -62,19 +86,129 @@
 	<article itemprop="articleBody"> 
 		<header class="article-info clearfix">
     <time datetime="2014-04-19T08:07:34.000Z" itemprop="datePublished">
-      <a href="/python/my-post/" title="My post" itemprop="url" class="article-time">4月 19 2014</a>
+      <a href="/python/python_function_of_list_dict/" title="Python 数组和字典对象的几个好用的方法" itemprop="url" class="article-time">4月 19 2014</a>
     </time>
 
   <h1 itemprop="name" class="article-name">
     
-      <a href="/python/my-post/" title="My post" itemprop="url"><span>My post</span></a>
+      <a href="/python/python_function_of_list_dict/" title="Python 数组和字典对象的几个好用的方法" itemprop="url"><span>Python 数组和字典对象的几个好用的方法</span></a>
   </h1>
 </header>
 
 	<div class="article-content">
 		
 		
-		  
+		<h3 id="1、“+”加号">1、“+”加号</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
+b = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]
+print a + b
+<span class="preprocessor"># print[1, 2, 3, 4, 5, 6]</span>
+<span class="preprocessor"># 数组相加</span>
+</pre></td></tr></table></figure>
+
+<h3 id="2、“*”乘号">2、“*”乘号</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>a = [<span class="string">"xxx"</span>]
+b = a * <span class="number">5</span>
+print b
+<span class="array"># print </span>[<span class="string">"xxx"</span>,<span class="string">"xxx"</span>,<span class="string">"xxx"</span>,<span class="string">"xxx"</span>,<span class="string">"xxx"</span>] 
+<span class="array"># </span>快速生成元素相同的数组
+</pre></td></tr></table></figure>
+
+<h3 id="3、_enumerate(list)">3、 enumerate(list)</h3>
+<p>语法：</p>
+<ul>
+<li>enumerate(an_iter)</li>
+<li>enumerate(an_iter, start)</li>
+</ul>
+<p>示例：</p>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>print enumerate([‘a’, ‘b’, ‘c’, ‘d’])</td>
+<td>enumerate object</td>
+<td></td>
+</tr>
+<tr>
+<td>print list(enumerate([‘a’, ‘b’, ‘c’, ‘d’]))</td>
+<td>[(0, ‘a’), (1, ‘b’), (2, ‘c’), (3, ‘d’)]</td>
+<td></td>
+</tr>
+<tr>
+<td>print list(enumerate([‘a’, ‘b’, ‘c’, ‘d’], 5))</td>
+<td>[(5, ‘a’), (6, ‘b’), (7, ‘c’), (8, ‘d’)]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="4、_zip函数">4、 zip函数</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>lista = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]
+listb = [<span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>, <span class="number">60</span>, <span class="number">70</span>]
+print zip(lista,listb)
+<span class="preprocessor"># [(1,20),(2,30),(3,40),(4,50),(5,60)]</span>
+<span class="preprocessor"># 输出由两个数组相同位置的数字组成的元组列表，元素的个数与较少的相同</span>
+</pre></td></tr></table></figure>
+
+<h3 id="5、_字典对象item()方法">5、 字典对象item()方法</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>my_dict = {
+	<span class="string">"Name"</span> : <span class="string">"Jackie"</span>,
+	<span class="string">"Age"</span> : <span class="number">25</span>,
+	<span class="string">"Gender"</span> : <span class="string">"Male"</span>
+}
+print my_dict.item()
+<span class="array"># </span>输出[(<span class="string">"Name"</span>, <span class="string">"Jackie"</span>),(<span class="string">"Age"</span>, <span class="number">25</span>),(<span class="string">"Gender"</span>, <span class="string">"Male"</span>)]
+</pre></td></tr></table></figure>
+
+<h3 id="6、_List_Comprehension用法">6、 List Comprehension用法</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>evens_to_50 = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">51</span>) <span class="keyword">for</span> i % <span class="number">2</span> ==<span class="number">0</span>]
+<span class="preprocessor">#输出0到50以内所有的偶数</span>
+<span class="preprocessor">#i for i [] <span class="keyword">if</span> [] 语法结构</span>
+</pre></td></tr></table></figure>
+
+<h3 id="7、_匿名函数lambda">7、 匿名函数lambda</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>lista = [<span class="string">"!XtXeXXrXXcXXeXXXsXX XaX XXeXXhXXtX XXmXXaXX XIX"</span>]
+xcode = filter(<span class="keyword">lambda</span> x: x!=<span class="string">"X"</span>, lista[::-<span class="number">1</span>])
+<span class="keyword">print</span> xcode
+<span class="comment"># 输出"I am the secret!"</span>
+<span class="comment"># 语法 filter(lambda x: [x条件语句], 作用范围(数组))</span>
+</pre></td></tr></table></figure>
+
+  
 	</div>
 		<footer class="article-footer clearfix">
 
@@ -94,7 +228,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="http://jackieluo.github.io/python/my-post/" data-title="My post | JackieLuo&#39;s Github Files" data-tsina="undefined" class="share clearfix">
+  <div data-url="http://jackieluo.github.io/python/python_function_of_list_dict/" data-title="Python 数组和字典对象的几个好用的方法 | JackieLuo&#39;s Github Files" data-tsina="undefined" class="share clearfix">
   </div>
 
 </div>
