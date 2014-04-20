@@ -9,6 +9,26 @@
     
     <meta name="author" content="Jackie Luo">
     
+    <meta name="description" content="方法1[::-1]
+1
+2
+3
+4
+list = &quot;test1&quot;
+print list[::-1]
+# list[a:b:c] ，输出区间为[a,b),步长为C
+# 输出 &quot;1tset&quot;
+
+
+方法2-reverse()
+1
+2
+3
+4
+list = [1, 2, 3]
+list.reverse()
+">
+    
     
     
     <meta name="twitter:card" content="summary" />
@@ -74,10 +94,53 @@
 	<div class="article-content">
 		
 		
-		  
+		<h3 id="方法1[::-1]">方法1[::-1]</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre>list = <span class="string">"test1"</span>
+<span class="keyword">print</span> list[::-<span class="number">1</span>]
+<span class="comment"># list[a:b:c] ，输出区间为[a,b),步长为C</span>
+<span class="comment"># 输出 "1tset"</span>
+</pre></td></tr></table></figure>
+
+<h3 id="方法2-reverse()">方法2-reverse()</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre>list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
+list.reverse()
+<span class="keyword">print</span> list
+<span class="comment"># 输出 [3, 2, 1]</span>
+</pre></td></tr></table></figure>
+
+<h3 id="方法3-For_loop()">方法3-For loop()</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre>list = <span class="string">"test1"</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> range(len(list)):
+    <span class="keyword">print</span> list[len(list)-i-<span class="number">1</span>],
+<span class="comment"># 加上,表示在同一行输出</span>
+</pre></td></tr></table></figure>
+
+  
 	</div>
 		<footer class="article-footer clearfix">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/python/">python</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/python/">python</a><a href="/tags/逆序输出/">逆序输出</a>
+  </div>
 
 
 
@@ -127,7 +190,7 @@
 	<p class="asidetitle">分类</p>
 		<ul>
 		
-			<li><a href="/categories/python/" title="python">python<sup>1</sup></a></li>
+			<li><a href="/categories/python/" title="python">python<sup>2</sup></a></li>
 		
 		</ul>
 </div>
@@ -144,7 +207,7 @@
   <div class="tagcloudlist">
     <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/python/" style="font-size: NaNpx;">python</a>
+       <a href="/tags/python/" style="font-size: 20.00px;">python</a><a href="/tags/逆序输出/" style="font-size: 10.00px;">逆序输出</a>
     </div>
   </div>
 
