@@ -99,29 +99,29 @@ print b
 		
 		
 		<h3 id="1、“+”加号">1、“+”加号</h3>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
+<figure class="highlight python"><table><tr><td class="gutter"><pre>1
 2
 3
 4
 5
 </pre></td><td class="code"><pre>a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
 b = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]
-print a + b
-<span class="preprocessor"># print[1, 2, 3, 4, 5, 6]</span>
-<span class="preprocessor"># 数组相加</span>
+<span class="keyword">print</span> a + b
+<span class="comment"># print[1, 2, 3, 4, 5, 6]</span>
+<span class="comment"># 数组相加</span>
 </pre></td></tr></table></figure>
 
 <h3 id="2、“*”乘号">2、“*”乘号</h3>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
+<figure class="highlight python"><table><tr><td class="gutter"><pre>1
 2
 3
 4
 5
 </pre></td><td class="code"><pre>a = [<span class="string">"xxx"</span>]
 b = a * <span class="number">5</span>
-print b
-<span class="array"># print </span>[<span class="string">"xxx"</span>,<span class="string">"xxx"</span>,<span class="string">"xxx"</span>,<span class="string">"xxx"</span>,<span class="string">"xxx"</span>] 
-<span class="array"># </span>快速生成元素相同的数组
+<span class="keyword">print</span> b
+<span class="comment"># print ["xxx","xxx","xxx","xxx","xxx"] </span>
+<span class="comment"># 快速生成元素相同的数组</span>
 </pre></td></tr></table></figure>
 
 <h3 id="3、_enumerate(list)">3、 enumerate(list)</h3>
@@ -157,20 +157,20 @@ print b
 </tbody>
 </table>
 <h3 id="4、_zip函数">4、 zip函数</h3>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
+<figure class="highlight python"><table><tr><td class="gutter"><pre>1
 2
 3
 4
 5
 </pre></td><td class="code"><pre>lista = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]
 listb = [<span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>, <span class="number">60</span>, <span class="number">70</span>]
-print zip(lista,listb)
-<span class="preprocessor"># [(1,20),(2,30),(3,40),(4,50),(5,60)]</span>
-<span class="preprocessor"># 输出由两个数组相同位置的数字组成的元组列表，元素的个数与较少的相同</span>
+<span class="keyword">print</span> zip(lista,listb)
+<span class="comment"># [(1,20),(2,30),(3,40),(4,50),(5,60)]</span>
+<span class="comment"># 输出由两个数组相同位置的数字组成的元组列表，元素的个数与较少的相同</span>
 </pre></td></tr></table></figure>
 
 <h3 id="5、_字典对象item()方法">5、 字典对象item()方法</h3>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
+<figure class="highlight python"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -182,21 +182,21 @@ print zip(lista,listb)
 	<span class="string">"Age"</span> : <span class="number">25</span>,
 	<span class="string">"Gender"</span> : <span class="string">"Male"</span>
 }
-print my_dict.item()
-<span class="array"># </span>输出[(<span class="string">"Name"</span>, <span class="string">"Jackie"</span>),(<span class="string">"Age"</span>, <span class="number">25</span>),(<span class="string">"Gender"</span>, <span class="string">"Male"</span>)]
+<span class="keyword">print</span> my_dict.item()
+<span class="comment"># 输出[("Name", "Jackie"),("Age", 25),("Gender", "Male")]</span>
 </pre></td></tr></table></figure>
 
 <h3 id="6、_List_Comprehension用法">6、 List Comprehension用法</h3>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
+<figure class="highlight python"><table><tr><td class="gutter"><pre>1
 2
 3
 </pre></td><td class="code"><pre>evens_to_50 = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">51</span>) <span class="keyword">for</span> i % <span class="number">2</span> ==<span class="number">0</span>]
-<span class="preprocessor">#输出0到50以内所有的偶数</span>
-<span class="preprocessor">#i for i [] <span class="keyword">if</span> [] 语法结构</span>
+<span class="comment">#输出0到50以内所有的偶数</span>
+<span class="comment">#i for i [] if [] 语法结构</span>
 </pre></td></tr></table></figure>
 
 <h3 id="7、_匿名函数lambda">7、 匿名函数lambda</h3>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
+<figure class="highlight python"><table><tr><td class="gutter"><pre>1
 2
 3
 4
