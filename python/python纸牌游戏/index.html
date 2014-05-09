@@ -352,6 +352,7 @@
 71
 72
 73
+74
 </pre></td><td class="code"><pre><span class="comment">#纸牌游戏，共有两组0-7的数字</span>
 <span class="comment">#若点击前后两张纸牌数字一致，则纸牌翻面</span>
 <span class="comment">#翻完所有纸牌则游戏结束</span>
@@ -409,7 +410,7 @@ second_card = [] <span class="comment">#被翻开的第二张纸牌的位置与�
     <span class="keyword">for</span> i <span class="keyword">in</span> range(len(lst)):
     <span class="comment">#若纸牌所在位置为True，则显示数字，否则显示背面</span>
         <span class="keyword">if</span> exposed[i] == <span class="keyword">True</span>:
-            canvas.draw_text(str(lst[i]), (i*<span class="number">50</span> + <span class="number">15</span>, <span class="number">70</span>), <span class="number">50</span>, <span class="string">"white"</span>)
+            canvas.draw_image(img, [lst[i]*<span class="number">50</span> + <span class="number">25</span>, <span class="number">50</span>],(<span class="number">50</span>,<span class="number">100</span>), [i*<span class="number">50</span> +<span class="number">25</span>, <span class="number">50</span>],(<span class="number">50</span>,<span class="number">100</span>))
         <span class="keyword">else</span>:
             canvas.draw_polygon([(i*<span class="number">50</span>, <span class="number">0</span>), ((i+<span class="number">1</span>)*<span class="number">50</span>, <span class="number">0</span>), ((i+<span class="number">1</span>)*<span class="number">50</span>, <span class="number">100</span>),(i*<span class="number">50</span>, <span class="number">100</span>)], <span class="number">3</span>, <span class="string">'Black'</span>, <span class="string">'Green'</span>)
 
@@ -417,6 +418,7 @@ second_card = [] <span class="comment">#被翻开的第二张纸牌的位置与�
 frame = simplegui.create_frame(<span class="string">"Memory"</span>, <span class="number">800</span>, <span class="number">100</span>)
 frame.add_button(<span class="string">"Reset"</span>, new_game)
 label = frame.add_label(<span class="string">"Turns = 0"</span>)
+img = simplegui.load_image(<span class="string">'https://lh5.googleusercontent.com/-8E2wYduat8M/U1-brzUkZvI/AAAAAAAAAYM/KvXo0lQ4YKw/w400-h100-no/num.png'</span>)
 
 <span class="comment"># register event handlers</span>
 frame.set_mouseclick_handler(mouseclick)
